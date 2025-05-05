@@ -24,7 +24,6 @@ const (
 type HelloRequest struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
 	Name          string                 `protobuf:"bytes,1,opt,name=name,proto3" json:"name,omitempty"`
-	Age           uint32                 `protobuf:"varint,16,opt,name=age,proto3" json:"age,omitempty"`
 	unknownFields protoimpl.UnknownFields
 	sizeCache     protoimpl.SizeCache
 }
@@ -64,13 +63,6 @@ func (x *HelloRequest) GetName() string {
 		return x.Name
 	}
 	return ""
-}
-
-func (x *HelloRequest) GetAge() uint32 {
-	if x != nil {
-		return x.Age
-	}
-	return 0
 }
 
 type HelloResponse struct {
@@ -121,10 +113,9 @@ var File_proto_hello_hello_proto protoreflect.FileDescriptor
 
 const file_proto_hello_hello_proto_rawDesc = "" +
 	"\n" +
-	"\x17proto/hello/hello.proto\x12\x05hello\"4\n" +
+	"\x17proto/hello/hello.proto\x12\x05hello\"\"\n" +
 	"\fHelloRequest\x12\x12\n" +
-	"\x04name\x18\x01 \x01(\tR\x04name\x12\x10\n" +
-	"\x03age\x18\x10 \x01(\rR\x03age\"%\n" +
+	"\x04name\x18\x01 \x01(\tR\x04name\"%\n" +
 	"\rHelloResponse\x12\x14\n" +
 	"\x05greet\x18\x01 \x01(\tR\x05greet2G\n" +
 	"\fHelloService\x127\n" +
