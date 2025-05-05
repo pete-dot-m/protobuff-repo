@@ -32,8 +32,7 @@ jobs:
           file_pattern: 'protogen/*'
       - name: Bump version and push tag
         id: tag_version
-        uses: anothrNick/github-tag-action@v1.61.0
+        uses: anothrNick/github-tag-action@v1.71.0
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           WITH_V: true
-          DEFAULT_BUMP: patch
